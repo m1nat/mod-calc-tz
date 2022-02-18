@@ -1,0 +1,21 @@
+.wrapper_calc {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 93%;
+
+  .display_keypard {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;      
+  }
+
+  .history {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
