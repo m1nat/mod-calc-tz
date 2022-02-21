@@ -4,7 +4,7 @@ import { CALCULATOR_KEY } from "../../redux/calculatorRedux/calculator.reducer";
 import { useDispatch } from "react-redux";
 
 import classes from './History.module.scss';
-import { loadClearHistory } from "../../redux/calculatorRedux/calculator.actions";
+import { loadClearHistory, loadClearItem } from "../../redux/calculatorRedux/calculator.actions";
 
 const History_Calc = () => {
 
@@ -19,7 +19,8 @@ const History_Calc = () => {
       <h2>History
         <span onClick={() => dispatch(loadClearHistory())} style={{ marginLeft: '50px', color: 'red', cursor: 'pointer' }}>x</span>
       </h2>
-      {(viewCalculator.history).map((el, i) => <p key={i}>{el}</p>)}
+      {(viewCalculator.history).map((el, i) => <p onClick={() => dispatch(loadClearItem(el))} key={i}>{el}</p>)}  
+      {/* it only works on a double click. =\ */}
     </div>
   )
 }

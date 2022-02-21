@@ -1,4 +1,4 @@
-import { LOAD_ANS, LOAD_BUTTONS, LOAD_CLEAR, LOAD_BACKSPACE, LOAD_CLEARHISTORY } from './calculator.actionsTypes';
+import { LOAD_ANS, LOAD_BUTTONS, LOAD_CLEAR, LOAD_BACKSPACE, LOAD_CLEARHISTORY, LOAD_CLEARITEM } from './calculator.actionsTypes';
 
 export const loadButtons = (number) => {
   return {
@@ -31,6 +31,13 @@ export const loadBackspace = (number) => {
 export const loadClearHistory = (number) => {
   return {
     type: LOAD_CLEARHISTORY,
+    payload: number
+  }
+};
+
+export const loadClearItem = (number) => {
+  return {
+    type: LOAD_CLEARITEM,
     payload: number
   }
 };
